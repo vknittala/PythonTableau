@@ -14,9 +14,9 @@ import datetime as dt
 var = ('apple', 'pear', 'banana')
 var = range(10)
 #dictionary
-var = {'name':'Om', 'location':'shiridi'}
+var = {'name':'Vidya', 'location':'RR'}
 #set
-var = {'om', 'sai', 'ram'}
+var = {'apple', 'pear', 'banana'}
 #boolean
 var = False
 """
@@ -93,27 +93,13 @@ data = pd.merge(data, seasons, on ='Month')
 #df = df.drop('columnname', axis = 1)
 data = data.drop('ClientKeywords', axis = 1)
 data = data.drop(['Day','Month', 'Year','Time'] , axis = 1)
-
+      
 #exporting the file to csv
 data.to_csv('ValueIncCleaned.csv', index = False)
-
-data.info()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+# syntax to get the index of rows in a pandas DataFrame whose column matches specific values:
+#df.index[df['column_name']==value].tolist()
+myItemList = data.index[data['ItemCode'] == 465780].tolist() 
 
 
 
